@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops - Problem 03 - Task</title>
+    <style>
+        section {
+        color: purple;
+    }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        let myString = ''
+        let myArray = []
+
+        function isPrime(num) {
+            // If num is less than 2, it is not a prime number
+            if (num < 2) {
+                return false;
+            }
+
+            // Check if num is divisible by any number less than itself
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                return false;
+                }
+            }
+
+            // If num is not divisible by any number less than itself, it is a prime number
+            return true;
+        }
+
+        let a = 500
+        let b = 1
+        for(let i = 500; i >= 1 && i <= 500; i--) {
+            if(isPrime(i) === true) {
+                myArray.push(`${i}`)
+            }
+        }
+
+        myString =  myArray.join(' ')
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.textContent = myString;
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

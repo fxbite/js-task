@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - Problem 01 - Task</title>
+    <style>
+        section {
+            color: purple
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        // Add your code here
+        const myName = 'Chris'
+        const myAge = 42
+
+        // Don't edit the code below here!
+
+        const section = document.querySelector('section');
+
+        let para1 = document.createElement('p');
+        para1.textContent = myName;
+        let para2 = document.createElement('p');
+        para2.textContent = myAge;
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops - Problem 01 - Task</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <script>
+        const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans']
+        myArray.forEach((value, index) => {
+            const ul = document.getElementById("list");
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(value));
+            ul.appendChild(li);
+        })
+    </script>
+</body>
+</html>

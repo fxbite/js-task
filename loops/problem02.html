@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops - Problem 02 - Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+        section {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <h1 onclick="printResult()" class="btn btn-primary">Submit</h1>
+        </form>
+        <section></section>
+    </div>
+
+    <script>
+        let phonebook = [
+            { name : 'Chris', number : '1549' },
+            { name : 'Li Kang', number : '9634' },
+            { name : 'Anne', number : '9065' },
+            { name : 'Francesca', number : '3001' },
+            { name : 'Mustafa', number : '6888' },
+            { name : 'Tina', number : '4312' },
+            { name : 'Bert', number : '7780' },
+            { name : 'Jada', number : '2282' },
+        ]
+
+        function getPhoneNumber(name) {
+            let result 
+            const searchName = name.toLowerCase().trim()
+            for(let e of phonebook) {
+                if(searchName === e.name.toLowerCase().trim()) {
+                    result = e.number
+                }
+            }
+            if(!result) return result = 'No data'
+            return result
+        }
+
+        function printResult() {
+            const nameSearch = document.getElementById('name').value
+            const section = document.querySelector('section');
+            let para1 = document.createElement('p');
+            para1.textContent = getPhoneNumber(nameSearch);
+            section.appendChild(para1);
+        }
+
+    </script>
+</body>
+</html>

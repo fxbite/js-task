@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Task</title>
+</head>
+<body>
+    <h1>Image Slideshow</h1>
+    <div id="container"></div>
+    <button id="back" onclick="backBtn()">Back</button>
+    <button id="next" onclick="nextBtn()">Next</button>
+    <script>
+        let index = 0
+        const images = [
+            'https://raw.githubusercontent.com/fxbite/imange-js-task/main/alex-knight-5-GNa303REg-unsplash.jpg', 
+            'https://raw.githubusercontent.com/fxbite/imange-js-task/main/christian-joudrey-9bdt03k4ujw-unsplash.jpg', 
+            'https://raw.githubusercontent.com/fxbite/imange-js-task/main/digitalarbyter-qd1esba0e3c-unsplash.jpg',
+            'https://raw.githubusercontent.com/fxbite/imange-js-task/main/nicki-eliza-schinow-BjJP2TN8WoI-unsplash.jpg'
+        ]
+
+        function renderImage(index = 0) {
+            const imageContainer = document.getElementById('container')
+            const img = `<img src="${images[index]}" alt="image" width="500px" height="300px">`
+            imageContainer.innerHTML = img
+        }
+
+        function backBtn() {
+           index-- 
+           if(index < 0) {
+                index = 0
+            }
+            renderImage(index)
+        }
+
+        function nextBtn() {
+            index++
+            if(index >= images.length) {
+                index = images.length - 1
+            }
+            renderImage(index)
+        }
+
+        
+        renderImage()
+
+
+    </script>
+</body>
+</html>

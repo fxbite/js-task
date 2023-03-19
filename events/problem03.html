@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Problem 03 - Task</title>
+    <style>
+        .button-bar {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 500px;
+            border: 2px solid black;
+        }
+
+        .button-bar button {
+            margin: 20px 0;
+            width: 100px;
+            padding: 8px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="button-bar" id="bar">
+        <button id="btn-red" onclick="red()">Red</button>
+        <button id="btn-yellow" onclick="yellow()">Yellow</button>
+        <button id="btn-green" onclick="green()">Green</button>
+        <button id="btn-purple" onclick="purple()">Purple</button>
+    </div>
+
+    <script>
+        function red() {
+            const bar = document.getElementById('bar')
+            bar.style.backgroundColor = 'red'
+        }
+
+        function yellow() {
+            const bar = document.getElementById('bar')
+            bar.style.backgroundColor = 'yellow'
+        }
+
+        function green() {
+            const bar = document.getElementById('bar')
+            bar.style.backgroundColor = 'green'
+        }
+
+        function purple() {
+            const bar = document.getElementById('bar')
+            bar.style.backgroundColor = 'purple'
+        }
+    </script>
+</body>
+</html>

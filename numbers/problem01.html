@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers - Problem 01 - Task</title>
+    <style>
+        section {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        let finalResult;
+        let evenOddResult;
+
+        // Add your code here
+        const numbers = [2,3,7,5]
+        const result1 = numbers[0] + numbers[1]
+        const result2 = numbers[2] - numbers[3]
+        finalResult = result1 * result2
+
+        if(finalResult % 2 === 0) {
+            evenOddResult = 0
+        } else {
+            evenOddResult = finalResult
+        }
+        
+        // Don't edit the code below here!
+
+        const section = document.querySelector('section');
+
+        let para1 = document.createElement('p');
+        let finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+        para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+        let para2 = document.createElement('p');
+        let evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.'
+        para2.textContent = evenOddResultCheck;
+
+        section.appendChild(para1);
+        section.appendChild(para2);
+    </script>
+</body>
+</html>

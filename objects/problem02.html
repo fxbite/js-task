@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects - Problem 02 -Task</title>
+    <style>
+        section {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        let info;
+
+        // Add your code here
+        const artist = {
+            name: 'Son Tung M-TP',
+            nationality: 'Vietnamese',
+            genre: 'pop',
+            debut: 2015,
+            song: [ 
+                {
+                    name: 'Con mua ngang qua',
+                    release: 2012
+                },
+                {
+                    name: 'Hay trao cho anh',
+                    release: 2013
+                },
+            ]
+        }
+
+        info = `
+            The ${artist.nationality} ${artist.genre} start ${artist.name} were active since ${artist.debut}. <br>
+            His/her first song, ${artist.song[0].name}, was released in ${artist.song[0].release}. <br>
+            His/her last song ${artist.song[1].name} is the most succesfully by far.
+        `
+
+        // Don't edit the code below here!
+
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.innerHTML = info;
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

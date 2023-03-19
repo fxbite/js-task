@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String - Problem 01 - Task</title>
+    <style>
+        section {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        // Add your code here
+        var quoteStart = `Don't judge each day by the harvest you reap `;
+        var quoteEnd = `but by the seeds that you plant.`;
+
+        // Don't edit the code below here!
+        var section = document.querySelector('section');
+        var para1 = document.createElement('p');
+
+        var finalQuote = `${quoteStart} ${quoteEnd}`
+        para1.textContent = finalQuote;
+
+        section.appendChild(para1)
+    </script>
+</body>
+</html>

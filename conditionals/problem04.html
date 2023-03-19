@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals - Problem 04 - Task</title>
+    <style>
+        section {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+        const machineActive = false
+        const pwd  = 'asdsadsadas'
+        let response
+        let machineResult
+        let pwdResult
+
+        if(machineActive === true) {
+            machineResult = 'Machine is active. Trying login.'
+            if(pwd === 'cheese') {
+                pwdResult = 'Login successful.';
+            }
+            
+            if(pwd !== 'cheese') {
+                pwdResult = 'Login failed.'
+            }
+        } else {
+            machineResult = 'Machine is unactive. Trying active.'
+        }
+
+        if(machineActive === true) {
+            response = `
+                ${machineResult}. <br>
+                ${pwdResult}
+            `
+        } else {
+            response = `
+                ${machineResult}.
+            `
+        }
+
+        const section = document.querySelector('section');
+        let para1 = document.createElement('p');
+        para1.innerHTML = response;
+        section.appendChild(para1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions - Problem 02 - Task</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="400" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <script>
+        function drawRectangle(x, y, width, height, color) {
+            const c = document.getElementById('myCanvas');
+            const ctx = c.getContext("2d");
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+        }
+        drawRectangle(20, 20, 150, 100, 'rgb(0,0,0)')
+    </script>
+</body>
+</html>
